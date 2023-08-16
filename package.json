@@ -1,0 +1,35 @@
+{
+  "name": "curso-nodejs",
+  "version": "1.0.0",
+  "description": "curso nodejs de midudev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmartinezr86/curso-nodejs.git"
+  },
+  "keywords": [
+    "curso",
+    "nodejs",
+    "npm",
+    "midudev"
+  ],
+  "author": "Bárbara Martínez Rizo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmartinezr86/curso-nodejs/issues"
+  },
+  "homepage": "https://github.com/bmartinezr86/curso-nodejs#readme",
+  "dependencies": {
+    "picocolors": "1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "8.47.0",
+    "standard": "17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+}

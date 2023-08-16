@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>npm Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        :root {
+            --color-npm: #CB3837;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #35424a;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+
+        header span {
+            margin: 0px auto;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+        }
+
+        .npm-logo {
+            color: var(--color-npm);
+            font-size: 65px;
+            margin-right: 1.5%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .copyable {
+            cursor: pointer;
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0px;
+            display: flex;
+            align-items: center;
+        }
+
+        .copy-icon {
+            margin-left: auto;
+            color: #555;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+        }
+
+        .copyable:hover .copy-icon {
+            color: var(--color-npm);
+            background: #fff;
+        }
+
+        h3 {
+            margin-top: 3rem;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #indice {
+            list-style: none;
+            padding: 0;
+        }
+
+        #indice li {
+            margin-bottom: 8px;
+        }
+
+        #indice a {
+            text-decoration: none;
+            color: var(--color-npm);
+            /* Usando el color de npm definido en tu código */
+            transition: color 0.3s ease-in-out;
+        }
+
+        #indice a:hover {
+            color: #35424a;
+            /* Cambia el color al hacer hover */
+        }
+
+        #scrollTopButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .scroll-to-top {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            background-color: var(--color-npm);
+            color: white;
+            font-size: 24px;
+            line-height: 40px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #35424a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span>
+            <i class="fab fa-npm npm-logo"></i>
+            <h1>Info</h1>
+        </span>
+    </header>
+
+    <div class="container">
+        <h2>Contenido de la página</h2>
+        <ul id="indice">
+            <li><a href="#que-es-npm">¿Qué es npm?</a></li>
+            <li><a href="#inicializar-paquete">¿Cómo inicializar un paquete?</a></li>
+            <li><a href="#instalar-paquetes">¿Cómo instalar paquetes?</a></li>
+            <li><a href="#desinstalar-paquetes">¿Cómo desinstalar paquetes?</a></li>
+            <li><a href="#utilizar-paquetes">¿Cómo utilizar paquetes?</a></li>
+        </ul>
+    </div>
+
+    <div class="container" id="que-es-npm">
+        <h2>¿Qué es npm?</h2>
+        <code>(Node Package Manager)</code>
+        </span>
+        <p>Es el administrador de paquetes oficial para el ecosistema de Node.js. Node.js es un entorno de ejecución
+            de
+            JavaScript en el lado del servidor que permite a los desarrolladores construir aplicaciones web y otras
+            aplicaciones de red escalables y de alto rendimiento utilizando JavaScript.</p>
+        <p>
+            pm se utiliza para instalar, administrar y compartir paquetes de código reutilizable de JavaScript.
+            Estos
+            paquetes pueden contener bibliotecas, frameworks, módulos, herramientas y cualquier otro tipo de código
+            que
+            se pueda utilizar en proyectos de Node.js. Los paquetes pueden ser creados por desarrolladores
+            individuales,
+            equipos de desarrollo o incluso empresas, y se alojan en el registro público de npm para que otros
+            desarrolladores puedan acceder a ellos y utilizarlos en sus propios proyectos.
+        </p>
+        <h2>Licencia</h2>
+        <p>MIT License</p>
+    </div>
+
+    <div class="container" id="inicializar-paquete">
+        <h2>¿Cómo inicializar un paquete?<code></h2>
+            <ul>
+                <li>Especificando preferencias</li>
+                <div class="copyable" onclick="copyTextToClipboard(this)">
+                    <code>npm init</code>
+            <i class="fas fa-copy copy-icon"></i>
+    </div>
+
+    <li>Con los valores por defecto</li>
+    <div class="copyable" onclick="copyTextToClipboard(this)">
+        <code>npm init -y</code>
+        <i class="fas fa-copy copy-icon"></i>
+    </div>
+    <img src="images/npm init.png" alt="captura-npm-init">
+    </ul>
+
+    </div>
+
+    <div class="container" id="instalar-paquetes">
+        <h2>¿Cómo instalar paquetes?</h2>
+        <ul>
+            <li>Paquetes de producción - <code> (se requieren para que funcione la aplicación)</code></li>
+            <div class="copyable" onclick="copyTextToClipboard(this)">
+                <code>npm i nombrePaquete </code>
+                <i class="fas fa-copy copy-icon"></i>
+            </div>
+            <div class="copyable" onclick="copyTextToClipboard(this)">
+                <code>npm install nombrePaquete </code>
+                <i class="fas fa-copy copy-icon"></i>
+            </div>
+            <li>Paquetes de desarrollo:</li>
+            <div class="copyable" onclick="copyTextToClipboard(this)">
+                <code>npm i nombrePaquete -D</code>
+                <i class="fas fa-copy copy-icon"></i>
+            </div>
+
+        </ul>
+
+        <h3>Diferencias en el JSON generado por npm:</h3>
+        <img src="images/npm install dev.png" alt="diferencias-dependecias-dev/proc-json">
+    </div>
+
+    <div class="container" id="desinstalar-paquetes">
+        <h2>¿Cómo desinstalar paquetes?</h2>
+        <div class="copyable" onclick="copyTextToClipboard(this)">
+            <code>npm uninstall nombrePaquete</code>
+            <i class="fas fa-copy copy-icon"></i>
+        </div>
+    </div>
+    <div class="container" id="utilizar-paquetes">
+        <h2>¿Cómo utilizar paquetes?</h2>
+        <div class="copyable" onclick="copyTextToClipboard(this)">
+            <code>const package = require('package-name');</code>
+            <i class="fas fa-copy copy-icon"></i>
+        </div>
+
+        <h3>Ejemplo de uso:</h3>
+        <img src="images/npm-uso-dependencias.png" alt="ejemplo de uso">
+    </div>
+
+    <div id="scrollTopButton">
+        <a href="#header" class="scroll-to-top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
